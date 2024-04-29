@@ -20,7 +20,7 @@ def sendemails(ffrom, to, subject, msg):
     subject=subject,
     html_content=msg)
     try:
-        sg = SendGridAPIClient('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')
+        sg = SendGridAPIClient('secret')
         response = sg.send(message)
         print(response.status_code)
         print(response.body)

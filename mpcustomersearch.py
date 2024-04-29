@@ -128,8 +128,8 @@ def get_merchant_orders(orders, datetime_init, datetime_end, offset=0, canceled=
                 
 datetime_base = datetime.now()
 dt = format_datetime(datetime_base.replace(hour=0, minute=0, second=0, microsecond=0))
-datetime_init =  format_datetime(datetime_base.replace(day=26, hour=0, minute=0, second=0, microsecond=0)) + '-03:00' 
-datetime_end  =  format_datetime(datetime_base.replace(day=26, hour=23, minute=59, second=59, microsecond=999999)) + '-03:00'
+datetime_init =  format_datetime(datetime_base.replace(day=28, hour=0, minute=0, second=0, microsecond=0)) + '-03:00' 
+datetime_end  =  format_datetime(datetime_base.replace(day=28, hour=23, minute=59, second=59, microsecond=999999)) + '-03:00'
                 
 orders = []               
 get_merchant_orders(orders, datetime_init, datetime_end)

@@ -14,7 +14,7 @@ def send_email(email):
 
 # Lista de endereços de e-mail
 emails = [
-    'ramiruel@hotmail.com'
+   'junior.bnm@hotmail.com'
 ]
 
 

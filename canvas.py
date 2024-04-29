@@ -17,8 +17,8 @@ def toHash(email):
     # Obter o hash final
     return hash_object.hexdigest()
 
-access_token = 'EAAC89fkUGNEBABlJXKOZBjErJ1oWR0E7AmkeGZAhG3fZBDN2tDvl9VWOzPa7E5WuRw3mpG8NiPpfWClguG0bbwgMj9U1bwfqL0JjmIMbydHNLCCyetOyOlSqPQ2JSqBmErgpZCiJCnL2iBqZBm35MHQD3JDqfshRWJKUDvAV3qPpDRvh9QNLfnfQGa1QKu8AZD'
-pixel_id = '2120259218170665'
+access_token = '?'
+pixel_id = '?'
 
 def fb_pixel_request(price, email="", phone="", ip="186.206.45.225", agent="", event="Purchase", country="Brasil"):
     FacebookAdsApi.init(access_token=access_token)
