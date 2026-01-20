@@ -126,10 +126,12 @@ def get_merchant_orders(orders, datetime_init, datetime_end, offset=0, canceled=
     get_merchant_orders(orders, datetime_init, datetime_end, next_offset)                
                     
                 
-datetime_base = datetime.now()
+# Set timezone to UTC-3 (Brazil/São Paulo)
+utc_minus_3 = pytz.timezone('America/Sao_Paulo')
+datetime_base = datetime.now(utc_minus_3)
 dt = format_datetime(datetime_base.replace(hour=0, minute=0, second=0, microsecond=0))
-datetime_init =  format_datetime(datetime_base.replace(day=28, hour=0, minute=0, second=0, microsecond=0)) + '-03:00' 
-datetime_end  =  format_datetime(datetime_base.replace(day=28, hour=23, minute=59, second=59, microsecond=999999)) + '-03:00'
+datetime_init =  format_datetime(datetime_base.replace(day=19, month=1, year=2026, hour=0, minute=0, second=0, microsecond=0)) + '-03:00' 
+datetime_end  =  format_datetime(datetime_base.replace(day=19, month=1, year=2026, hour=23, minute=59, second=59, microsecond=999999)) + '-03:00'
                 
 orders = []               
 get_merchant_orders(orders, datetime_init, datetime_end)
@@ -147,13 +149,13 @@ count_geral = 0
 for order in orders:
     total_geral += order['total']
     count_geral += 1
-    if 'Plataforma Multigames' in order['title']:
+    if 'Sistema Multigames' in order['title']:
         total_plataforma += order['total']
         count_plataforma += 1
-    elif 'Plataforma PS2' in order['title'] or 'Emulador PS2' in order['title']:
+    elif 'Sistema PS2' in order['title'] or 'Emulador PS2' in order['title']:
         total_ps2 += order['total']
         count_ps2 += 1
-    elif 'Xbox 360' in order['title']:
+    elif 'Sistema Xbox 360' in order['title']:
         total_xbox360 += order['total']
         count_xbox360 += 1
     else:

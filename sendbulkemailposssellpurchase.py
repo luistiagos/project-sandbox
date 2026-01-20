@@ -5,7 +5,7 @@ def send_email(email):
     email = email.strip()
     url = 'https://digitalstoregames.pythonanywhere.com/manualdeliver'
     data = {
-        'productId':921110,
+        'productId':21111,
         'email':email
     }
 
@@ -14,7 +14,7 @@ def send_email(email):
 
 # Lista de endereços de e-mail
 emails = [
-   'junior.bnm@hotmail.com'
+   'r.joselucio@yahoo.com'
 ]
 
 
